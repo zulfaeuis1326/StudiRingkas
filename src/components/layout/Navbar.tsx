@@ -113,11 +113,18 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
             {/* Dark / Light Mode Toggle */}
             <button
+              id="theme-toggle-btn"
+              type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-xl border border-[#E2E8E5] dark:border-[#253B34] text-[#596A65] dark:text-[#94A7A0] hover:text-[#111C19] dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-[#182723] transition"
-              aria-label="Toggle Mode"
+              className="p-2 rounded-xl border border-[#E2E8E5] dark:border-[#253B34] text-[#596A65] dark:text-[#94A7A0] hover:text-[#111C19] dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-[#182723] transition cursor-pointer"
+              aria-label={theme === 'dark' ? 'Ganti ke Mode Terang' : 'Ganti ke Mode Gelap'}
+              title={theme === 'dark' ? 'Ganti ke Mode Terang (Light Mode)' : 'Ganti ke Mode Gelap (Dark Mode)'}
             >
-              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-slate-600" />
+              )}
             </button>
 
             {/* User Profile or Login CTA */}
