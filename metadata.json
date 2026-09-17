@@ -1,0 +1,6 @@
+{
+  "name": "StudiRingkas",
+  "description": "Platform SaaS ringkasan materi kuliah, video YouTube, audio podcast belajar, dan quiz interaktif untuk mahasiswa Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
